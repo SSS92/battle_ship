@@ -1,0 +1,274 @@
+\hypertarget{implementation_8cpp}{}\section{src/implementation.cpp File Reference}
+\label{implementation_8cpp}\index{src/implementation.\+cpp@{src/implementation.\+cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$new$>$}\newline
+{\ttfamily \#include $<$ios$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$cassert$>$}\newline
+Include dependency graph for implementation.\+cpp\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{implementation_8cpp_a5756a7d60f6c31842f242f74bb115bb3}{number\+\_\+of\+\_\+ships}~4
+\item 
+\#define \hyperlink{implementation_8cpp_ab6643000bbc9a2a5545464b585813495}{shot\+\_\+in\+\_\+the\+\_\+ship}~6
+\item 
+\#define \hyperlink{implementation_8cpp_aaea70725893ea65f7e547bab2bff4874}{shot\+\_\+at\+\_\+sea}~8
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{implementation_8cpp_aa6f08a21ac360b09aa7a2b3cd5874898}{reset\+\_\+input\+\_\+stream} ()
+\begin{DoxyCompactList}\small\item\em Clear Input stream when the user has entered wrong type value. \end{DoxyCompactList}\item 
+int \hyperlink{implementation_8cpp_a15bd3855c575ba8400a0b959ab8aebaf}{generate\+\_\+random\+\_\+number} (int max, int min)
+\begin{DoxyCompactList}\small\item\em Generate a random number between params and return it. \end{DoxyCompactList}\item 
+int $\ast$$\ast$ \hyperlink{implementation_8cpp_af49b9437f862404570055681f25f9123}{create\+\_\+sea} ()
+\begin{DoxyCompactList}\small\item\em Create a two dimensional array, initialize every element wit 0, and return it. \end{DoxyCompactList}\item 
+void \hyperlink{implementation_8cpp_a728214ec6bcfceb9104691b874ff56ff}{delete\+\_\+sea} (int $\ast$$\ast$sea)
+\begin{DoxyCompactList}\small\item\em delete the two dimensional array. \end{DoxyCompactList}\item 
+void \hyperlink{implementation_8cpp_ab7a071bf039ebf75ce41b1d78e0f8d5c}{show\+\_\+sea} (int $\ast$$\ast$sea)
+\begin{DoxyCompactList}\small\item\em Print the two dimensional array. \end{DoxyCompactList}\item 
+bool \hyperlink{implementation_8cpp_a96f31e9ae2789f95321b63b72a6381a8}{is\+\_\+out\+\_\+of\+\_\+sea} (int x, int y, int offset=0)
+\item 
+bool \hyperlink{implementation_8cpp_ae5f7c6b9b27fc02ebe5b86522a0fcd03}{is\+\_\+not\+\_\+around\+\_\+of\+\_\+ship} (int x, int y, int offset, int i, int j)
+\item 
+bool \hyperlink{implementation_8cpp_a4379b857bb0ef33bd6f0d8ba29e30423}{is\+\_\+invalid\+\_\+position} (int $\ast$$\ast$sea, int x, int y, int length)
+\item 
+int \hyperlink{implementation_8cpp_a5bb91cc7b2957807a03d8abba7d3b577}{put\+\_\+horizontal} (int $\ast$$\ast$sea, int start\+\_\+x, int start\+\_\+y, int length)
+\begin{DoxyCompactList}\small\item\em Put the ship horizontally on the sea. \end{DoxyCompactList}\item 
+int \hyperlink{implementation_8cpp_a12e08e75183794cd3ccb57608b34e603}{put\+\_\+vertical} (int $\ast$$\ast$sea, int start\+\_\+x, int start\+\_\+y, int length)
+\begin{DoxyCompactList}\small\item\em Put the ship vertically on the sea. \end{DoxyCompactList}\item 
+void \hyperlink{implementation_8cpp_ac46786252302c2454404cbcf72e532dd}{put\+\_\+ship} (int $\ast$$\ast$sea, int length)
+\item 
+int \hyperlink{implementation_8cpp_ad0a0d6dc7564e1e35b2a663ebbc61e07}{fill\+\_\+sea} (int $\ast$$\ast$sea)
+\item 
+void \hyperlink{implementation_8cpp_a546381bd29538bffdd598823b57aa58d}{show\+\_\+shot\+\_\+result} (int shot\+\_\+result)
+\item 
+int \hyperlink{implementation_8cpp_a05d731dfafe48f4fd6b8166a24140b68}{kill\+\_\+ship} (int $\ast$$\ast$sea, int x, int y)
+\item 
+void \hyperlink{implementation_8cpp_ad2d6cfd80de78dcba45a22596c2427d9}{insert\+\_\+shot\+\_\+coordinates} (int \&x, int \&y)
+\item 
+void \hyperlink{implementation_8cpp_ab8b57908da1b1da3806cc663f1ecbbea}{play} (int $\ast$$\ast$sea, int number\+\_\+of\+\_\+units)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const unsigned int \hyperlink{implementation_8cpp_a7a55da58cb44f3dda559b01e06ab029f}{N} = 10
+\item 
+int \hyperlink{implementation_8cpp_aca972f97010e6b4d067bdfccae8114cc}{ships} \mbox{[}4\mbox{]} = \{1, 1, 1, 1\}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{implementation_8cpp_a5756a7d60f6c31842f242f74bb115bb3}\label{implementation_8cpp_a5756a7d60f6c31842f242f74bb115bb3}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!number\+\_\+of\+\_\+ships@{number\+\_\+of\+\_\+ships}}
+\index{number\+\_\+of\+\_\+ships@{number\+\_\+of\+\_\+ships}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{number\+\_\+of\+\_\+ships}{number\_of\_ships}}
+{\footnotesize\ttfamily \#define number\+\_\+of\+\_\+ships~4}
+
+\mbox{\Hypertarget{implementation_8cpp_aaea70725893ea65f7e547bab2bff4874}\label{implementation_8cpp_aaea70725893ea65f7e547bab2bff4874}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!shot\+\_\+at\+\_\+sea@{shot\+\_\+at\+\_\+sea}}
+\index{shot\+\_\+at\+\_\+sea@{shot\+\_\+at\+\_\+sea}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{shot\+\_\+at\+\_\+sea}{shot\_at\_sea}}
+{\footnotesize\ttfamily \#define shot\+\_\+at\+\_\+sea~8}
+
+\mbox{\Hypertarget{implementation_8cpp_ab6643000bbc9a2a5545464b585813495}\label{implementation_8cpp_ab6643000bbc9a2a5545464b585813495}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!shot\+\_\+in\+\_\+the\+\_\+ship@{shot\+\_\+in\+\_\+the\+\_\+ship}}
+\index{shot\+\_\+in\+\_\+the\+\_\+ship@{shot\+\_\+in\+\_\+the\+\_\+ship}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{shot\+\_\+in\+\_\+the\+\_\+ship}{shot\_in\_the\_ship}}
+{\footnotesize\ttfamily \#define shot\+\_\+in\+\_\+the\+\_\+ship~6}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{implementation_8cpp_af49b9437f862404570055681f25f9123}\label{implementation_8cpp_af49b9437f862404570055681f25f9123}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!create\+\_\+sea@{create\+\_\+sea}}
+\index{create\+\_\+sea@{create\+\_\+sea}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{create\+\_\+sea()}{create\_sea()}}
+{\footnotesize\ttfamily int$\ast$$\ast$ create\+\_\+sea (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Create a two dimensional array, initialize every element wit 0, and return it. 
+
+\begin{DoxyReturn}{Returns}
+return the two dimensional array (int$\ast$$\ast$ type) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{implementation_8cpp_a728214ec6bcfceb9104691b874ff56ff}\label{implementation_8cpp_a728214ec6bcfceb9104691b874ff56ff}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!delete\+\_\+sea@{delete\+\_\+sea}}
+\index{delete\+\_\+sea@{delete\+\_\+sea}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{delete\+\_\+sea()}{delete\_sea()}}
+{\footnotesize\ttfamily void delete\+\_\+sea (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{sea }\end{DoxyParamCaption})}
+
+
+
+delete the two dimensional array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em two} & dimensional array (int $\ast$$\ast$) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{implementation_8cpp_ad0a0d6dc7564e1e35b2a663ebbc61e07}\label{implementation_8cpp_ad0a0d6dc7564e1e35b2a663ebbc61e07}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!fill\+\_\+sea@{fill\+\_\+sea}}
+\index{fill\+\_\+sea@{fill\+\_\+sea}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{fill\+\_\+sea()}{fill\_sea()}}
+{\footnotesize\ttfamily int fill\+\_\+sea (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{sea }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{implementation_8cpp_a15bd3855c575ba8400a0b959ab8aebaf}\label{implementation_8cpp_a15bd3855c575ba8400a0b959ab8aebaf}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!generate\+\_\+random\+\_\+number@{generate\+\_\+random\+\_\+number}}
+\index{generate\+\_\+random\+\_\+number@{generate\+\_\+random\+\_\+number}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{generate\+\_\+random\+\_\+number()}{generate\_random\_number()}}
+{\footnotesize\ttfamily int generate\+\_\+random\+\_\+number (\begin{DoxyParamCaption}\item[{int}]{max,  }\item[{int}]{min }\end{DoxyParamCaption})}
+
+
+
+Generate a random number between params and return it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em maximum} & number, type int \\
+\hline
+{\em minimum} & number, type int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a random number between two params 
+\end{DoxyReturn}
+\mbox{\Hypertarget{implementation_8cpp_ad2d6cfd80de78dcba45a22596c2427d9}\label{implementation_8cpp_ad2d6cfd80de78dcba45a22596c2427d9}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!insert\+\_\+shot\+\_\+coordinates@{insert\+\_\+shot\+\_\+coordinates}}
+\index{insert\+\_\+shot\+\_\+coordinates@{insert\+\_\+shot\+\_\+coordinates}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{insert\+\_\+shot\+\_\+coordinates()}{insert\_shot\_coordinates()}}
+{\footnotesize\ttfamily void insert\+\_\+shot\+\_\+coordinates (\begin{DoxyParamCaption}\item[{int \&}]{x,  }\item[{int \&}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{implementation_8cpp_a4379b857bb0ef33bd6f0d8ba29e30423}\label{implementation_8cpp_a4379b857bb0ef33bd6f0d8ba29e30423}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!is\+\_\+invalid\+\_\+position@{is\+\_\+invalid\+\_\+position}}
+\index{is\+\_\+invalid\+\_\+position@{is\+\_\+invalid\+\_\+position}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{is\+\_\+invalid\+\_\+position()}{is\_invalid\_position()}}
+{\footnotesize\ttfamily bool is\+\_\+invalid\+\_\+position (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{sea,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{implementation_8cpp_ae5f7c6b9b27fc02ebe5b86522a0fcd03}\label{implementation_8cpp_ae5f7c6b9b27fc02ebe5b86522a0fcd03}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!is\+\_\+not\+\_\+around\+\_\+of\+\_\+ship@{is\+\_\+not\+\_\+around\+\_\+of\+\_\+ship}}
+\index{is\+\_\+not\+\_\+around\+\_\+of\+\_\+ship@{is\+\_\+not\+\_\+around\+\_\+of\+\_\+ship}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{is\+\_\+not\+\_\+around\+\_\+of\+\_\+ship()}{is\_not\_around\_of\_ship()}}
+{\footnotesize\ttfamily bool is\+\_\+not\+\_\+around\+\_\+of\+\_\+ship (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{offset,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{implementation_8cpp_a96f31e9ae2789f95321b63b72a6381a8}\label{implementation_8cpp_a96f31e9ae2789f95321b63b72a6381a8}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!is\+\_\+out\+\_\+of\+\_\+sea@{is\+\_\+out\+\_\+of\+\_\+sea}}
+\index{is\+\_\+out\+\_\+of\+\_\+sea@{is\+\_\+out\+\_\+of\+\_\+sea}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{is\+\_\+out\+\_\+of\+\_\+sea()}{is\_out\_of\_sea()}}
+{\footnotesize\ttfamily bool is\+\_\+out\+\_\+of\+\_\+sea (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{offset = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{implementation_8cpp_a05d731dfafe48f4fd6b8166a24140b68}\label{implementation_8cpp_a05d731dfafe48f4fd6b8166a24140b68}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!kill\+\_\+ship@{kill\+\_\+ship}}
+\index{kill\+\_\+ship@{kill\+\_\+ship}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{kill\+\_\+ship()}{kill\_ship()}}
+{\footnotesize\ttfamily int kill\+\_\+ship (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{sea,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{implementation_8cpp_ab8b57908da1b1da3806cc663f1ecbbea}\label{implementation_8cpp_ab8b57908da1b1da3806cc663f1ecbbea}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!play@{play}}
+\index{play@{play}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily void play (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{sea,  }\item[{int}]{number\+\_\+of\+\_\+units }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{implementation_8cpp_a5bb91cc7b2957807a03d8abba7d3b577}\label{implementation_8cpp_a5bb91cc7b2957807a03d8abba7d3b577}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!put\+\_\+horizontal@{put\+\_\+horizontal}}
+\index{put\+\_\+horizontal@{put\+\_\+horizontal}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{put\+\_\+horizontal()}{put\_horizontal()}}
+{\footnotesize\ttfamily int put\+\_\+horizontal (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{sea,  }\item[{int}]{start\+\_\+x,  }\item[{int}]{start\+\_\+y,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Put the ship horizontally on the sea. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & sea, where we want to put the ship. \\
+\hline
+{\em start} & X coordinate \\
+\hline
+{\em start} & Y coordinate \\
+\hline
+{\em length} & of the ship, which we will put on (start\+\_\+x, start\+\_\+y) coordinate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{implementation_8cpp_ac46786252302c2454404cbcf72e532dd}\label{implementation_8cpp_ac46786252302c2454404cbcf72e532dd}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!put\+\_\+ship@{put\+\_\+ship}}
+\index{put\+\_\+ship@{put\+\_\+ship}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{put\+\_\+ship()}{put\_ship()}}
+{\footnotesize\ttfamily void put\+\_\+ship (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{sea,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{implementation_8cpp_a12e08e75183794cd3ccb57608b34e603}\label{implementation_8cpp_a12e08e75183794cd3ccb57608b34e603}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!put\+\_\+vertical@{put\+\_\+vertical}}
+\index{put\+\_\+vertical@{put\+\_\+vertical}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{put\+\_\+vertical()}{put\_vertical()}}
+{\footnotesize\ttfamily int put\+\_\+vertical (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{sea,  }\item[{int}]{start\+\_\+x,  }\item[{int}]{start\+\_\+y,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Put the ship vertically on the sea. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the} & sea, where we want to put the ship. \\
+\hline
+{\em start} & X coordinate \\
+\hline
+{\em start} & Y coordinate \\
+\hline
+{\em length} & of the ship, which we will put on (start\+\_\+x, start\+\_\+y) coordinate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{implementation_8cpp_aa6f08a21ac360b09aa7a2b3cd5874898}\label{implementation_8cpp_aa6f08a21ac360b09aa7a2b3cd5874898}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!reset\+\_\+input\+\_\+stream@{reset\+\_\+input\+\_\+stream}}
+\index{reset\+\_\+input\+\_\+stream@{reset\+\_\+input\+\_\+stream}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{reset\+\_\+input\+\_\+stream()}{reset\_input\_stream()}}
+{\footnotesize\ttfamily void reset\+\_\+input\+\_\+stream (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear Input stream when the user has entered wrong type value. 
+
+\begin{DoxyReturn}{Returns}
+return type is void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{implementation_8cpp_ab7a071bf039ebf75ce41b1d78e0f8d5c}\label{implementation_8cpp_ab7a071bf039ebf75ce41b1d78e0f8d5c}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!show\+\_\+sea@{show\+\_\+sea}}
+\index{show\+\_\+sea@{show\+\_\+sea}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{show\+\_\+sea()}{show\_sea()}}
+{\footnotesize\ttfamily void show\+\_\+sea (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{sea }\end{DoxyParamCaption})}
+
+
+
+Print the two dimensional array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em two} & dimensional array (int$\ast$$\ast$) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{implementation_8cpp_a546381bd29538bffdd598823b57aa58d}\label{implementation_8cpp_a546381bd29538bffdd598823b57aa58d}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!show\+\_\+shot\+\_\+result@{show\+\_\+shot\+\_\+result}}
+\index{show\+\_\+shot\+\_\+result@{show\+\_\+shot\+\_\+result}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{show\+\_\+shot\+\_\+result()}{show\_shot\_result()}}
+{\footnotesize\ttfamily void show\+\_\+shot\+\_\+result (\begin{DoxyParamCaption}\item[{int}]{shot\+\_\+result }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{implementation_8cpp_a7a55da58cb44f3dda559b01e06ab029f}\label{implementation_8cpp_a7a55da58cb44f3dda559b01e06ab029f}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!N@{N}}
+\index{N@{N}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{N}{N}}
+{\footnotesize\ttfamily const unsigned int N = 10}
+
+\mbox{\Hypertarget{implementation_8cpp_aca972f97010e6b4d067bdfccae8114cc}\label{implementation_8cpp_aca972f97010e6b4d067bdfccae8114cc}} 
+\index{implementation.\+cpp@{implementation.\+cpp}!ships@{ships}}
+\index{ships@{ships}!implementation.\+cpp@{implementation.\+cpp}}
+\subsubsection{\texorpdfstring{ships}{ships}}
+{\footnotesize\ttfamily int ships\mbox{[}4\mbox{]} = \{1, 1, 1, 1\}}
+
