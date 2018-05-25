@@ -98,23 +98,25 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa6f08a21ac360b09aa7a2b3cd5874898"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#aa6f08a21ac360b09aa7a2b3cd5874898">reset_input_stream</a> ()</td></tr>
-<tr class="memdesc:aa6f08a21ac360b09aa7a2b3cd5874898"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear Input stream when the user has entered wrong type value.  <a href="#aa6f08a21ac360b09aa7a2b3cd5874898">More...</a><br /></td></tr>
+<tr class="memdesc:aa6f08a21ac360b09aa7a2b3cd5874898"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset input stream when the user has entered wrong type value.  <a href="#aa6f08a21ac360b09aa7a2b3cd5874898">More...</a><br /></td></tr>
 <tr class="separator:aa6f08a21ac360b09aa7a2b3cd5874898"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15bd3855c575ba8400a0b959ab8aebaf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a15bd3855c575ba8400a0b959ab8aebaf">generate_random_number</a> (int max, int min)</td></tr>
-<tr class="memdesc:a15bd3855c575ba8400a0b959ab8aebaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a random number between params and return it.  <a href="#a15bd3855c575ba8400a0b959ab8aebaf">More...</a><br /></td></tr>
+<tr class="memdesc:a15bd3855c575ba8400a0b959ab8aebaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a random integer in [min, max) interval and returns it.  <a href="#a15bd3855c575ba8400a0b959ab8aebaf">More...</a><br /></td></tr>
 <tr class="separator:a15bd3855c575ba8400a0b959ab8aebaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af49b9437f862404570055681f25f9123"><td class="memItemLeft" align="right" valign="top">int **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#af49b9437f862404570055681f25f9123">create_sea</a> ()</td></tr>
-<tr class="memdesc:af49b9437f862404570055681f25f9123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a two dimensional array, initialize every element wit 0, and return it.  <a href="#af49b9437f862404570055681f25f9123">More...</a><br /></td></tr>
+<tr class="memdesc:af49b9437f862404570055681f25f9123"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a two dimensional dynamic array, initializes every element with 0-s and returnes a int** pointer to the array, if there is no enough space throws bad_alloc() exception.  <a href="#af49b9437f862404570055681f25f9123">More...</a><br /></td></tr>
 <tr class="separator:af49b9437f862404570055681f25f9123"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a728214ec6bcfceb9104691b874ff56ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a728214ec6bcfceb9104691b874ff56ff">delete_sea</a> (int **sea)</td></tr>
-<tr class="memdesc:a728214ec6bcfceb9104691b874ff56ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">delete the two dimensional array.  <a href="#a728214ec6bcfceb9104691b874ff56ff">More...</a><br /></td></tr>
+<tr class="memdesc:a728214ec6bcfceb9104691b874ff56ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes the created two dimensional array.  <a href="#a728214ec6bcfceb9104691b874ff56ff">More...</a><br /></td></tr>
 <tr class="separator:a728214ec6bcfceb9104691b874ff56ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7a071bf039ebf75ce41b1d78e0f8d5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#ab7a071bf039ebf75ce41b1d78e0f8d5c">show_sea</a> (int **sea)</td></tr>
-<tr class="memdesc:ab7a071bf039ebf75ce41b1d78e0f8d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the two dimensional array.  <a href="#ab7a071bf039ebf75ce41b1d78e0f8d5c">More...</a><br /></td></tr>
+<tr class="memdesc:ab7a071bf039ebf75ce41b1d78e0f8d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the given two dimensional array.  <a href="#ab7a071bf039ebf75ce41b1d78e0f8d5c">More...</a><br /></td></tr>
 <tr class="separator:ab7a071bf039ebf75ce41b1d78e0f8d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96f31e9ae2789f95321b63b72a6381a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a96f31e9ae2789f95321b63b72a6381a8">is_out_of_sea</a> (int x, int y, int offset=0)</td></tr>
+<tr class="memdesc:a96f31e9ae2789f95321b63b72a6381a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the point on the entered coordinates (x, y) or the ship putted on the point goes beyond the bounds of the sea.  <a href="#a96f31e9ae2789f95321b63b72a6381a8">More...</a><br /></td></tr>
 <tr class="separator:a96f31e9ae2789f95321b63b72a6381a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5f7c6b9b27fc02ebe5b86522a0fcd03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#ae5f7c6b9b27fc02ebe5b86522a0fcd03">is_not_around_of_ship</a> (int x, int y, int offset, int i, int j)</td></tr>
+<tr class="memdesc:ae5f7c6b9b27fc02ebe5b86522a0fcd03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, whether the point on the entered coordinates on a single distance with another ship or not.  <a href="#ae5f7c6b9b27fc02ebe5b86522a0fcd03">More...</a><br /></td></tr>
 <tr class="separator:ae5f7c6b9b27fc02ebe5b86522a0fcd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4379b857bb0ef33bd6f0d8ba29e30423"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a4379b857bb0ef33bd6f0d8ba29e30423">is_invalid_position</a> (int **sea, int x, int y, int length)</td></tr>
 <tr class="separator:a4379b857bb0ef33bd6f0d8ba29e30423"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -125,16 +127,22 @@ Functions</h2></td></tr>
 <tr class="memdesc:a12e08e75183794cd3ccb57608b34e603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put the ship vertically on the sea.  <a href="#a12e08e75183794cd3ccb57608b34e603">More...</a><br /></td></tr>
 <tr class="separator:a12e08e75183794cd3ccb57608b34e603"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac46786252302c2454404cbcf72e532dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#ac46786252302c2454404cbcf72e532dd">put_ship</a> (int **sea, int length)</td></tr>
+<tr class="memdesc:ac46786252302c2454404cbcf72e532dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate random coordinates and direction, and put ship on the sea.  <a href="#ac46786252302c2454404cbcf72e532dd">More...</a><br /></td></tr>
 <tr class="separator:ac46786252302c2454404cbcf72e532dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0a0d6dc7564e1e35b2a663ebbc61e07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#ad0a0d6dc7564e1e35b2a663ebbc61e07">fill_sea</a> (int **sea)</td></tr>
+<tr class="memdesc:ad0a0d6dc7564e1e35b2a663ebbc61e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put all ships on the sea.  <a href="#ad0a0d6dc7564e1e35b2a663ebbc61e07">More...</a><br /></td></tr>
 <tr class="separator:ad0a0d6dc7564e1e35b2a663ebbc61e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a546381bd29538bffdd598823b57aa58d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a546381bd29538bffdd598823b57aa58d">show_shot_result</a> (int shot_result)</td></tr>
+<tr class="memdesc:a546381bd29538bffdd598823b57aa58d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the shot result message.  <a href="#a546381bd29538bffdd598823b57aa58d">More...</a><br /></td></tr>
 <tr class="separator:a546381bd29538bffdd598823b57aa58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05d731dfafe48f4fd6b8166a24140b68"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a05d731dfafe48f4fd6b8166a24140b68">kill_ship</a> (int **sea, int x, int y)</td></tr>
+<tr class="memdesc:a05d731dfafe48f4fd6b8166a24140b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shot at the given coordinates.  <a href="#a05d731dfafe48f4fd6b8166a24140b68">More...</a><br /></td></tr>
 <tr class="separator:a05d731dfafe48f4fd6b8166a24140b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2d6cfd80de78dcba45a22596c2427d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#ad2d6cfd80de78dcba45a22596c2427d9">insert_shot_coordinates</a> (int &amp;x, int &amp;y)</td></tr>
+<tr class="memdesc:ad2d6cfd80de78dcba45a22596c2427d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows the user to enter axis and ordinate coordinates for which the shot will be executed.  <a href="#ad2d6cfd80de78dcba45a22596c2427d9">More...</a><br /></td></tr>
 <tr class="separator:ad2d6cfd80de78dcba45a22596c2427d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8b57908da1b1da3806cc663f1ecbbea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#ab8b57908da1b1da3806cc663f1ecbbea">play</a> (int **sea, int number_of_units)</td></tr>
+<tr class="memdesc:ab8b57908da1b1da3806cc663f1ecbbea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function provides the cycle where a shot at the sea wil be performed along the entered coordinnates and the corresponding result.  <a href="#ab8b57908da1b1da3806cc663f1ecbbea">More...</a><br /></td></tr>
 <tr class="separator:ab8b57908da1b1da3806cc663f1ecbbea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
@@ -203,8 +211,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Create a two dimensional array, initialize every element wit 0, and return it. </p>
-<dl class="section return"><dt>Returns</dt><dd>return the two dimensional array (int** type) </dd></dl>
+<p>Creates a two dimensional dynamic array, initializes every element with 0-s and returnes a int** pointer to the array, if there is no enough space throws bad_alloc() exception. </p>
+<p>this is a long description for something </p><dl class="section return"><dt>Returns</dt><dd>returns a pointer to the created array </dd></dl>
 
 </div>
 </div>
@@ -224,10 +232,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>delete the two dimensional array. </p>
+<p>Deletes the created two dimensional array. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">two</td><td>dimensional array (int **) </td></tr>
+    <tr><td class="paramname">pointer</td><td>to the two dimensional array (int **) </td></tr>
   </table>
   </dd>
 </dl>
@@ -249,6 +257,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Put all ships on the sea. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sea</td><td>where we have to put ships </td></tr>
+    <tr><td class="paramname">return</td><td>number of units </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -278,15 +295,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Generate a random number between params and return it. </p>
+<p>Generates a random integer in [min, max) interval and returns it. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">maximum</td><td>number, type int </td></tr>
-    <tr><td class="paramname">minimum</td><td>number, type int </td></tr>
+    <tr><td class="paramname">maximum</td><td>number </td></tr>
+    <tr><td class="paramname">minimum</td><td>number </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a random number between two params </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>a random integer in [min , max) interval </dd></dl>
 
 </div>
 </div>
@@ -315,6 +332,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Allows the user to enter axis and ordinate coordinates for which the shot will be executed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td></td></tr>
+    <tr><td class="paramname">ordinate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -402,6 +428,9 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Check, whether the point on the entered coordinates on a single distance with another ship or not. </p>
+<dl class="section return"><dt>Returns</dt><dd>false if on a single distance, true otherwise </dd></dl>
+
 </div>
 </div>
 <a id="a96f31e9ae2789f95321b63b72a6381a8"></a>
@@ -435,6 +464,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Check whether the point on the entered coordinates (x, y) or the ship putted on the point goes beyond the bounds of the sea. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">axis</td><td></td></tr>
+    <tr><td class="paramname">ordinate</td><td></td></tr>
+    <tr><td class="paramname">offset</td><td>- (0 if we check point, and the ship length when we check ship position) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true if out of the sea, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -470,6 +510,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Shot at the given coordinates. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sea</td><td>where we have to shot </td></tr>
+    <tr><td class="paramname">axis</td><td></td></tr>
+    <tr><td class="paramname">ordinate</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>shot reslult value </dd></dl>
+
 </div>
 </div>
 <a id="ab8b57908da1b1da3806cc663f1ecbbea"></a>
@@ -497,6 +548,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The function provides the cycle where a shot at the sea wil be performed along the entered coordinnates and the corresponding result. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">The</td><td>Sea where we have to shot. </td></tr>
+    <tr><td class="paramname">The</td><td>count of cells where we located our ships. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -541,7 +601,7 @@ Variables</h2></td></tr>
 <p>Put the ship horizontally on the sea. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">the</td><td>sea, where we want to put the ship. </td></tr>
+    <tr><td class="paramname">the</td><td>sea, where we want to put the ship </td></tr>
     <tr><td class="paramname">start</td><td>X coordinate </td></tr>
     <tr><td class="paramname">start</td><td>Y coordinate </td></tr>
     <tr><td class="paramname">length</td><td>of the ship, which we will put on (start_x, start_y) coordinate </td></tr>
@@ -576,6 +636,15 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Generate random coordinates and direction, and put ship on the sea. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Sea</td><td>where we have to put the ship </td></tr>
+    <tr><td class="paramname">length</td><td>of the ship </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -620,7 +689,7 @@ Variables</h2></td></tr>
 <p>Put the ship vertically on the sea. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">the</td><td>sea, where we want to put the ship. </td></tr>
+    <tr><td class="paramname">the</td><td>sea, where we want to put the ship </td></tr>
     <tr><td class="paramname">start</td><td>X coordinate </td></tr>
     <tr><td class="paramname">start</td><td>Y coordinate </td></tr>
     <tr><td class="paramname">length</td><td>of the ship, which we will put on (start_x, start_y) coordinate </td></tr>
@@ -645,7 +714,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Clear Input stream when the user has entered wrong type value. </p>
+<p>Reset input stream when the user has entered wrong type value. </p>
 <dl class="section return"><dt>Returns</dt><dd>return type is void </dd></dl>
 
 </div>
@@ -666,10 +735,10 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Print the two dimensional array. </p>
+<p>Print the given two dimensional array. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">two</td><td>dimensional array (int**) </td></tr>
+    <tr><td class="paramname">pointer</td><td>to a two dimensional array (int**) </td></tr>
   </table>
   </dd>
 </dl>
@@ -691,6 +760,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Print the shot result message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Shot</td><td>result value </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

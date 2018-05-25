@@ -23,19 +23,19 @@ Include dependency graph for implementation.\+cpp\+:
 \begin{DoxyCompactItemize}
 \item 
 void \hyperlink{implementation_8cpp_aa6f08a21ac360b09aa7a2b3cd5874898}{reset\+\_\+input\+\_\+stream} ()
-\begin{DoxyCompactList}\small\item\em Clear Input stream when the user has entered wrong type value. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Reset input stream when the user has entered wrong type value. \end{DoxyCompactList}\item 
 int \hyperlink{implementation_8cpp_a15bd3855c575ba8400a0b959ab8aebaf}{generate\+\_\+random\+\_\+number} (int max, int min)
-\begin{DoxyCompactList}\small\item\em Generate a random number between params and return it. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Generates a random integer in \mbox{[}min, max) interval and returns it. \end{DoxyCompactList}\item 
 int $\ast$$\ast$ \hyperlink{implementation_8cpp_af49b9437f862404570055681f25f9123}{create\+\_\+sea} ()
-\begin{DoxyCompactList}\small\item\em Create a two dimensional array, initialize every element wit 0, and return it. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Creates a two dimensional dynamic array, initializes every element with 0-\/s and returnes a int$\ast$$\ast$ pointer to the array, if there is no enough space throws bad\+\_\+alloc() exception. \end{DoxyCompactList}\item 
 void \hyperlink{implementation_8cpp_a728214ec6bcfceb9104691b874ff56ff}{delete\+\_\+sea} (int $\ast$$\ast$sea)
-\begin{DoxyCompactList}\small\item\em delete the two dimensional array. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Deletes the created two dimensional array. \end{DoxyCompactList}\item 
 void \hyperlink{implementation_8cpp_ab7a071bf039ebf75ce41b1d78e0f8d5c}{show\+\_\+sea} (int $\ast$$\ast$sea)
-\begin{DoxyCompactList}\small\item\em Print the two dimensional array. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Print the given two dimensional array. \end{DoxyCompactList}\item 
 bool \hyperlink{implementation_8cpp_a96f31e9ae2789f95321b63b72a6381a8}{is\+\_\+out\+\_\+of\+\_\+sea} (int x, int y, int offset=0)
-\item 
+\begin{DoxyCompactList}\small\item\em Check whether the point on the entered coordinates (x, y) or the ship putted on the point goes beyond the bounds of the sea. \end{DoxyCompactList}\item 
 bool \hyperlink{implementation_8cpp_ae5f7c6b9b27fc02ebe5b86522a0fcd03}{is\+\_\+not\+\_\+around\+\_\+of\+\_\+ship} (int x, int y, int offset, int i, int j)
-\item 
+\begin{DoxyCompactList}\small\item\em Check, whether the point on the entered coordinates on a single distance with another ship or not. \end{DoxyCompactList}\item 
 bool \hyperlink{implementation_8cpp_a4379b857bb0ef33bd6f0d8ba29e30423}{is\+\_\+invalid\+\_\+position} (int $\ast$$\ast$sea, int x, int y, int length)
 \item 
 int \hyperlink{implementation_8cpp_a5bb91cc7b2957807a03d8abba7d3b577}{put\+\_\+horizontal} (int $\ast$$\ast$sea, int start\+\_\+x, int start\+\_\+y, int length)
@@ -43,17 +43,17 @@ int \hyperlink{implementation_8cpp_a5bb91cc7b2957807a03d8abba7d3b577}{put\+\_\+h
 int \hyperlink{implementation_8cpp_a12e08e75183794cd3ccb57608b34e603}{put\+\_\+vertical} (int $\ast$$\ast$sea, int start\+\_\+x, int start\+\_\+y, int length)
 \begin{DoxyCompactList}\small\item\em Put the ship vertically on the sea. \end{DoxyCompactList}\item 
 void \hyperlink{implementation_8cpp_ac46786252302c2454404cbcf72e532dd}{put\+\_\+ship} (int $\ast$$\ast$sea, int length)
-\item 
+\begin{DoxyCompactList}\small\item\em Generate random coordinates and direction, and put ship on the sea. \end{DoxyCompactList}\item 
 int \hyperlink{implementation_8cpp_ad0a0d6dc7564e1e35b2a663ebbc61e07}{fill\+\_\+sea} (int $\ast$$\ast$sea)
-\item 
+\begin{DoxyCompactList}\small\item\em Put all ships on the sea. \end{DoxyCompactList}\item 
 void \hyperlink{implementation_8cpp_a546381bd29538bffdd598823b57aa58d}{show\+\_\+shot\+\_\+result} (int shot\+\_\+result)
-\item 
+\begin{DoxyCompactList}\small\item\em Print the shot result message. \end{DoxyCompactList}\item 
 int \hyperlink{implementation_8cpp_a05d731dfafe48f4fd6b8166a24140b68}{kill\+\_\+ship} (int $\ast$$\ast$sea, int x, int y)
-\item 
+\begin{DoxyCompactList}\small\item\em Shot at the given coordinates. \end{DoxyCompactList}\item 
 void \hyperlink{implementation_8cpp_ad2d6cfd80de78dcba45a22596c2427d9}{insert\+\_\+shot\+\_\+coordinates} (int \&x, int \&y)
-\item 
+\begin{DoxyCompactList}\small\item\em Allows the user to enter axis and ordinate coordinates for which the shot will be executed. \end{DoxyCompactList}\item 
 void \hyperlink{implementation_8cpp_ab8b57908da1b1da3806cc663f1ecbbea}{play} (int $\ast$$\ast$sea, int number\+\_\+of\+\_\+units)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The function provides the cycle where a shot at the sea wil be performed along the entered coordinnates and the corresponding result. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
@@ -93,10 +93,10 @@ int \hyperlink{implementation_8cpp_aca972f97010e6b4d067bdfccae8114cc}{ships} \mb
 
 
 
-Create a two dimensional array, initialize every element wit 0, and return it. 
+Creates a two dimensional dynamic array, initializes every element with 0-\/s and returnes a int$\ast$$\ast$ pointer to the array, if there is no enough space throws bad\+\_\+alloc() exception. 
 
-\begin{DoxyReturn}{Returns}
-return the two dimensional array (int$\ast$$\ast$ type) 
+this is a long description for something \begin{DoxyReturn}{Returns}
+returns a pointer to the created array 
 \end{DoxyReturn}
 \mbox{\Hypertarget{implementation_8cpp_a728214ec6bcfceb9104691b874ff56ff}\label{implementation_8cpp_a728214ec6bcfceb9104691b874ff56ff}} 
 \index{implementation.\+cpp@{implementation.\+cpp}!delete\+\_\+sea@{delete\+\_\+sea}}
@@ -106,11 +106,11 @@ return the two dimensional array (int$\ast$$\ast$ type)
 
 
 
-delete the two dimensional array. 
+Deletes the created two dimensional array. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em two} & dimensional array (int $\ast$$\ast$) \\
+{\em pointer} & to the two dimensional array (int $\ast$$\ast$) \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{implementation_8cpp_ad0a0d6dc7564e1e35b2a663ebbc61e07}\label{implementation_8cpp_ad0a0d6dc7564e1e35b2a663ebbc61e07}} 
@@ -119,6 +119,17 @@ delete the two dimensional array.
 \subsubsection{\texorpdfstring{fill\+\_\+sea()}{fill\_sea()}}
 {\footnotesize\ttfamily int fill\+\_\+sea (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{sea }\end{DoxyParamCaption})}
 
+
+
+Put all ships on the sea. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Sea} & where we have to put ships \\
+\hline
+{\em return} & number of units \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{implementation_8cpp_a15bd3855c575ba8400a0b959ab8aebaf}\label{implementation_8cpp_a15bd3855c575ba8400a0b959ab8aebaf}} 
 \index{implementation.\+cpp@{implementation.\+cpp}!generate\+\_\+random\+\_\+number@{generate\+\_\+random\+\_\+number}}
 \index{generate\+\_\+random\+\_\+number@{generate\+\_\+random\+\_\+number}!implementation.\+cpp@{implementation.\+cpp}}
@@ -127,17 +138,17 @@ delete the two dimensional array.
 
 
 
-Generate a random number between params and return it. 
+Generates a random integer in \mbox{[}min, max) interval and returns it. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em maximum} & number, type int \\
+{\em maximum} & number \\
 \hline
-{\em minimum} & number, type int \\
+{\em minimum} & number \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-a random number between two params 
+a random integer in \mbox{[}min , max) interval 
 \end{DoxyReturn}
 \mbox{\Hypertarget{implementation_8cpp_ad2d6cfd80de78dcba45a22596c2427d9}\label{implementation_8cpp_ad2d6cfd80de78dcba45a22596c2427d9}} 
 \index{implementation.\+cpp@{implementation.\+cpp}!insert\+\_\+shot\+\_\+coordinates@{insert\+\_\+shot\+\_\+coordinates}}
@@ -145,6 +156,17 @@ a random number between two params
 \subsubsection{\texorpdfstring{insert\+\_\+shot\+\_\+coordinates()}{insert\_shot\_coordinates()}}
 {\footnotesize\ttfamily void insert\+\_\+shot\+\_\+coordinates (\begin{DoxyParamCaption}\item[{int \&}]{x,  }\item[{int \&}]{y }\end{DoxyParamCaption})}
 
+
+
+Allows the user to enter axis and ordinate coordinates for which the shot will be executed. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & \\
+\hline
+{\em ordinate} & \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{implementation_8cpp_a4379b857bb0ef33bd6f0d8ba29e30423}\label{implementation_8cpp_a4379b857bb0ef33bd6f0d8ba29e30423}} 
 \index{implementation.\+cpp@{implementation.\+cpp}!is\+\_\+invalid\+\_\+position@{is\+\_\+invalid\+\_\+position}}
 \index{is\+\_\+invalid\+\_\+position@{is\+\_\+invalid\+\_\+position}!implementation.\+cpp@{implementation.\+cpp}}
@@ -157,24 +179,74 @@ a random number between two params
 \subsubsection{\texorpdfstring{is\+\_\+not\+\_\+around\+\_\+of\+\_\+ship()}{is\_not\_around\_of\_ship()}}
 {\footnotesize\ttfamily bool is\+\_\+not\+\_\+around\+\_\+of\+\_\+ship (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{offset,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
 
+
+
+Check, whether the point on the entered coordinates on a single distance with another ship or not. 
+
+\begin{DoxyReturn}{Returns}
+false if on a single distance, true otherwise 
+\end{DoxyReturn}
 \mbox{\Hypertarget{implementation_8cpp_a96f31e9ae2789f95321b63b72a6381a8}\label{implementation_8cpp_a96f31e9ae2789f95321b63b72a6381a8}} 
 \index{implementation.\+cpp@{implementation.\+cpp}!is\+\_\+out\+\_\+of\+\_\+sea@{is\+\_\+out\+\_\+of\+\_\+sea}}
 \index{is\+\_\+out\+\_\+of\+\_\+sea@{is\+\_\+out\+\_\+of\+\_\+sea}!implementation.\+cpp@{implementation.\+cpp}}
 \subsubsection{\texorpdfstring{is\+\_\+out\+\_\+of\+\_\+sea()}{is\_out\_of\_sea()}}
 {\footnotesize\ttfamily bool is\+\_\+out\+\_\+of\+\_\+sea (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{offset = {\ttfamily 0} }\end{DoxyParamCaption})}
 
+
+
+Check whether the point on the entered coordinates (x, y) or the ship putted on the point goes beyond the bounds of the sea. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em axis} & \\
+\hline
+{\em ordinate} & \\
+\hline
+{\em offset} & -\/ (0 if we check point, and the ship length when we check ship position) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if out of the sea, false otherwise 
+\end{DoxyReturn}
 \mbox{\Hypertarget{implementation_8cpp_a05d731dfafe48f4fd6b8166a24140b68}\label{implementation_8cpp_a05d731dfafe48f4fd6b8166a24140b68}} 
 \index{implementation.\+cpp@{implementation.\+cpp}!kill\+\_\+ship@{kill\+\_\+ship}}
 \index{kill\+\_\+ship@{kill\+\_\+ship}!implementation.\+cpp@{implementation.\+cpp}}
 \subsubsection{\texorpdfstring{kill\+\_\+ship()}{kill\_ship()}}
 {\footnotesize\ttfamily int kill\+\_\+ship (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{sea,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
 
+
+
+Shot at the given coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Sea} & where we have to shot \\
+\hline
+{\em axis} & \\
+\hline
+{\em ordinate} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+shot reslult value 
+\end{DoxyReturn}
 \mbox{\Hypertarget{implementation_8cpp_ab8b57908da1b1da3806cc663f1ecbbea}\label{implementation_8cpp_ab8b57908da1b1da3806cc663f1ecbbea}} 
 \index{implementation.\+cpp@{implementation.\+cpp}!play@{play}}
 \index{play@{play}!implementation.\+cpp@{implementation.\+cpp}}
 \subsubsection{\texorpdfstring{play()}{play()}}
 {\footnotesize\ttfamily void play (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{sea,  }\item[{int}]{number\+\_\+of\+\_\+units }\end{DoxyParamCaption})}
 
+
+
+The function provides the cycle where a shot at the sea wil be performed along the entered coordinnates and the corresponding result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & Sea where we have to shot. \\
+\hline
+{\em The} & count of cells where we located our ships. \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{implementation_8cpp_a5bb91cc7b2957807a03d8abba7d3b577}\label{implementation_8cpp_a5bb91cc7b2957807a03d8abba7d3b577}} 
 \index{implementation.\+cpp@{implementation.\+cpp}!put\+\_\+horizontal@{put\+\_\+horizontal}}
 \index{put\+\_\+horizontal@{put\+\_\+horizontal}!implementation.\+cpp@{implementation.\+cpp}}
@@ -187,7 +259,7 @@ Put the ship horizontally on the sea.
 
 
 \begin{DoxyParams}{Parameters}
-{\em the} & sea, where we want to put the ship. \\
+{\em the} & sea, where we want to put the ship \\
 \hline
 {\em start} & X coordinate \\
 \hline
@@ -202,6 +274,17 @@ Put the ship horizontally on the sea.
 \subsubsection{\texorpdfstring{put\+\_\+ship()}{put\_ship()}}
 {\footnotesize\ttfamily void put\+\_\+ship (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{sea,  }\item[{int}]{length }\end{DoxyParamCaption})}
 
+
+
+Generate random coordinates and direction, and put ship on the sea. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Sea} & where we have to put the ship \\
+\hline
+{\em length} & of the ship \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{implementation_8cpp_a12e08e75183794cd3ccb57608b34e603}\label{implementation_8cpp_a12e08e75183794cd3ccb57608b34e603}} 
 \index{implementation.\+cpp@{implementation.\+cpp}!put\+\_\+vertical@{put\+\_\+vertical}}
 \index{put\+\_\+vertical@{put\+\_\+vertical}!implementation.\+cpp@{implementation.\+cpp}}
@@ -214,7 +297,7 @@ Put the ship vertically on the sea.
 
 
 \begin{DoxyParams}{Parameters}
-{\em the} & sea, where we want to put the ship. \\
+{\em the} & sea, where we want to put the ship \\
 \hline
 {\em start} & X coordinate \\
 \hline
@@ -231,7 +314,7 @@ Put the ship vertically on the sea.
 
 
 
-Clear Input stream when the user has entered wrong type value. 
+Reset input stream when the user has entered wrong type value. 
 
 \begin{DoxyReturn}{Returns}
 return type is void 
@@ -244,11 +327,11 @@ return type is void
 
 
 
-Print the two dimensional array. 
+Print the given two dimensional array. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em two} & dimensional array (int$\ast$$\ast$) \\
+{\em pointer} & to a two dimensional array (int$\ast$$\ast$) \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{implementation_8cpp_a546381bd29538bffdd598823b57aa58d}\label{implementation_8cpp_a546381bd29538bffdd598823b57aa58d}} 
@@ -257,6 +340,15 @@ Print the two dimensional array.
 \subsubsection{\texorpdfstring{show\+\_\+shot\+\_\+result()}{show\_shot\_result()}}
 {\footnotesize\ttfamily void show\+\_\+shot\+\_\+result (\begin{DoxyParamCaption}\item[{int}]{shot\+\_\+result }\end{DoxyParamCaption})}
 
+
+
+Print the shot result message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Shot} & result value \\
+\hline
+\end{DoxyParams}
 
 
 \subsection{Variable Documentation}

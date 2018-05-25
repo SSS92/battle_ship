@@ -17,7 +17,8 @@ deps/%.dep : src/%.cpp
 -include $(DEPENDS)
 
 .PHONY : clean docs
-clean : 
+clean :
+	@echo "clean up"
 	@rm -rf  deps/*.dep objects/*.o bin docs/doxygen/*
 
 docs : 
