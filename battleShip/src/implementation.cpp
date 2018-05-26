@@ -7,13 +7,29 @@
 #include <cstdlib>
 #include <cassert>
 
+/**
+ * The number of ships for the game
+ */
 #define number_of_ships 4
+/**
+ *The label for the damaged unit
+ */
 #define shot_in_the_ship 6
+/**
+ *The label for the lost shot
+ */
 #define shot_at_sea 8
 
 //const unsigned int N = std::numeric_limits<unsigned int>::max();
+/**
+ * The size of the square sea
+ */
 const unsigned int N = 10;
-int ships[4] = {1, 1, 1, 1};
+
+/**
+ * Array of ships. The value of ships i is the count of a ship with length i+1
+ */
+int ships[4] = {2, 1, 1, 1};
 
 /**
  *@brief Reset input stream when the user has entered wrong type value
@@ -111,19 +127,30 @@ bool is_out_of_sea(int x, int y, int offset = 1)
 }
 
 /**
-  *@brief Checks  whether the given point  on the entered coordinates on a single distance with another ship or not.
-  *
-  *@return false if on a single distance, true otherwise
+  *@brief Checks if the given point is on the ship, or the distance between them is 1.
+  *@param x is the start axis of the ship
+  *@param y is the start ordinate of the ship
+  *@param offset is the length of the ship
+  *@param i is the axis of the given point
+  *@param j is the ordinate of the given point
+  *@return false if on a single distance or on the ship, true otherwise
   */
 bool is_not_around_of_ship(int x, int y, int offset, int i, int j) 
 {
-    if((j != x) && ((i == (y - 1)) || (i == x + offset))) {
+    if((j != x) && ((i == (y - 1)) || (i == y + offset))) {
 	return true;
     }
     return false;
 }
-
-bool is_invalid_position(int** sea, int x, int y, int length)
+/**
+  *@brief Cheks if the given start point is valid for vertical  putting a ship with the given lenght
+  *@param sea is two dimensional array
+  *@param x is the start axis of the ship
+  *@param y is the start ordinate of the ship
+  *@param lenght is the length of the ship
+  *@return returns true if the position is not valid, 0 otherwise
+  */
+bool is_invalid_vertical_position(int** sea, int x, int y, int length)
 {
     assert(sea);
     for(int i = y - 1; i < y + length + 1; ++i) {
@@ -139,7 +166,30 @@ bool is_invalid_position(int** sea, int x, int y, int length)
     } 
     return false;
 }
-
+/**
+  *@brief Cheks if the given start point is valid for horizontal  putting a ship with the given lenght
+  *@param sea is two dimensional array
+  *@param x is the start axis of the ship
+  *@param y is the start ordinate of the ship
+  *@param lenght is the length of the ship
+  *@return returns true if the position is not valid, 0 otherwise
+  */
+bool is_invalid_horizontal_position(int** sea, int x, int y, int length)
+{
+    assert(sea);
+    for(int i = y - 1; i < y + 2; ++i) {
+	for(int j = x - 1; j < x + length  + 1; ++j) {
+	    if((is_out_of_sea(i, j)) || is_not_around_of_ship(x, y, length, j, i)) {
+		continue;
+	    }
+	    assert(*(sea + i) + j);
+	    if(1 == *(*(sea + i) + j)) {
+		return true;
+	    }
+	}
+    } 
+    return false;
+}
 /**
  *@brief Puts a ship with a given lenght horizontally on the sea at the given start point
  *@param the sea, where  the ship will be put
@@ -154,7 +204,7 @@ int put_horizontal(int** sea, int start_x, int start_y, int length)
     if(is_out_of_sea(start_y, start_x, length)) {
 	return 2;
     }
-    if(is_invalid_position(sea, start_y, start_x, length)) {
+    if(is_invalid_horizontal_position(sea, start_x, start_y, length)) {
 	return 1;
     }
     for(int i = start_x; i< start_x + length; ++i) {
@@ -178,7 +228,7 @@ int put_vertical(int** sea, int start_x, int start_y, int length)
     if(is_out_of_sea(start_x, start_y, length)) {
 	return 2;
     } 
-    if(is_invalid_position(sea, start_x, start_y, length)) {
+    if(is_invalid_vertical_position(sea, start_x, start_y, length)) {
 	return 1;
     }
     for(int i = start_y; i< (start_y + length); ++i) {
@@ -205,9 +255,9 @@ void put_ship(int** sea, int length) {
 }
 
 /**
-  *@brief Put all ships on the sea with random principe
+  *@brief Puts all ships on the sea with random principe
   *@param Sea where we have to put ships
-  *@param return number of units
+  *@return return number of units
   */
 int fill_sea(int** sea)
 {
@@ -229,7 +279,7 @@ int fill_sea(int** sea)
 }
 
 /**
-  *@brief Print the shot result message.
+  *@brief Prints the shot result message.
   *@param Shot result value
   */
 void show_shot_result(int shot_result)
@@ -246,11 +296,11 @@ void show_shot_result(int shot_result)
 }
 
 /**
-  *@brief Shot at the given coordinates.
+  *@brief Shots at the point with the  given coordinates.
   *@param Playing area
-  *@param axis
-  *@param ordinate
-  *@return shot result, returns 0, for   
+  *@param axis of the point
+  *@param ordinate of the point
+  *@return shot result, returns 0, if the shot is on target, 1 if there is no ship unit at the given point, 2, if the given point is out of the sea, 3 if the given point was already shot       
   */
 int kill_ship(int** sea, int x, int y)
 {
@@ -272,9 +322,9 @@ int kill_ship(int** sea, int x, int y)
 }
 
 /**
-  *@brief Allows the user to enter axis and ordinate coordinates for which the shot will be executed.
-  *@param axis
-  *@param ordinate
+  *@brief Reads the x and y coordinates of the target point from the terminal.
+  *@param x axis
+  *@param y ordinate
   */
 void insert_shot_coordinates(int& x, int& y)
 {
@@ -294,9 +344,9 @@ void insert_shot_coordinates(int& x, int& y)
 }
 
 /**
-  *@brief The function provides the cycle where a shot at the sea wil be performed along the entered coordinnates and the corresponding result.
-  *@param The Sea where we have to shot.
-  *@param The count of cells where we located our ships.
+  *@brief The function provides the cycle where a shot at the sea will be performed along the entered coordinnates and the output of the corresponding result.
+  *@param The sea wich will be shot.
+  *@param The count of the  cells of the ships.
   */
 void play(int** sea, int number_of_units) {
     assert(sea);

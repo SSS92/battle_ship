@@ -112,44 +112,48 @@ Functions</h2></td></tr>
 <tr class="memitem:ab7a071bf039ebf75ce41b1d78e0f8d5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#ab7a071bf039ebf75ce41b1d78e0f8d5c">show_sea</a> (int **sea)</td></tr>
 <tr class="memdesc:ab7a071bf039ebf75ce41b1d78e0f8d5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the given two dimensional array.  <a href="#ab7a071bf039ebf75ce41b1d78e0f8d5c">More...</a><br /></td></tr>
 <tr class="separator:ab7a071bf039ebf75ce41b1d78e0f8d5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96f31e9ae2789f95321b63b72a6381a8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a96f31e9ae2789f95321b63b72a6381a8">is_out_of_sea</a> (int x, int y, int offset=0)</td></tr>
-<tr class="memdesc:a96f31e9ae2789f95321b63b72a6381a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the point on the entered coordinates (x, y) or the ship putted on the point goes beyond the bounds of the sea.  <a href="#a96f31e9ae2789f95321b63b72a6381a8">More...</a><br /></td></tr>
-<tr class="separator:a96f31e9ae2789f95321b63b72a6381a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ab45306df873ee5a780b28c35be67d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a8ab45306df873ee5a780b28c35be67d1">is_out_of_sea</a> (int x, int y, int offset=1)</td></tr>
+<tr class="memdesc:a8ab45306df873ee5a780b28c35be67d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks whether there is free space from start (x, y) with the given offset in the.  <a href="#a8ab45306df873ee5a780b28c35be67d1">More...</a><br /></td></tr>
+<tr class="separator:a8ab45306df873ee5a780b28c35be67d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5f7c6b9b27fc02ebe5b86522a0fcd03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#ae5f7c6b9b27fc02ebe5b86522a0fcd03">is_not_around_of_ship</a> (int x, int y, int offset, int i, int j)</td></tr>
-<tr class="memdesc:ae5f7c6b9b27fc02ebe5b86522a0fcd03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check, whether the point on the entered coordinates on a single distance with another ship or not.  <a href="#ae5f7c6b9b27fc02ebe5b86522a0fcd03">More...</a><br /></td></tr>
+<tr class="memdesc:ae5f7c6b9b27fc02ebe5b86522a0fcd03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the given point is on the ship, or the distance between them is 1.  <a href="#ae5f7c6b9b27fc02ebe5b86522a0fcd03">More...</a><br /></td></tr>
 <tr class="separator:ae5f7c6b9b27fc02ebe5b86522a0fcd03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4379b857bb0ef33bd6f0d8ba29e30423"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a4379b857bb0ef33bd6f0d8ba29e30423">is_invalid_position</a> (int **sea, int x, int y, int length)</td></tr>
-<tr class="separator:a4379b857bb0ef33bd6f0d8ba29e30423"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f28bfe64eedcfa020533d92871ce6c4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a1f28bfe64eedcfa020533d92871ce6c4">is_invalid_vertical_position</a> (int **sea, int x, int y, int length)</td></tr>
+<tr class="memdesc:a1f28bfe64eedcfa020533d92871ce6c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cheks if the given start point is valid for vertical putting a ship with the given lenght.  <a href="#a1f28bfe64eedcfa020533d92871ce6c4">More...</a><br /></td></tr>
+<tr class="separator:a1f28bfe64eedcfa020533d92871ce6c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d098a65e36a83f5a042301e5408e00d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a7d098a65e36a83f5a042301e5408e00d">is_invalid_horizontal_position</a> (int **sea, int x, int y, int length)</td></tr>
+<tr class="memdesc:a7d098a65e36a83f5a042301e5408e00d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cheks if the given start point is valid for horizontal putting a ship with the given lenght.  <a href="#a7d098a65e36a83f5a042301e5408e00d">More...</a><br /></td></tr>
+<tr class="separator:a7d098a65e36a83f5a042301e5408e00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bb91cc7b2957807a03d8abba7d3b577"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a5bb91cc7b2957807a03d8abba7d3b577">put_horizontal</a> (int **sea, int start_x, int start_y, int length)</td></tr>
-<tr class="memdesc:a5bb91cc7b2957807a03d8abba7d3b577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put the ship horizontally on the sea.  <a href="#a5bb91cc7b2957807a03d8abba7d3b577">More...</a><br /></td></tr>
+<tr class="memdesc:a5bb91cc7b2957807a03d8abba7d3b577"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puts a ship with a given lenght horizontally on the sea at the given start point.  <a href="#a5bb91cc7b2957807a03d8abba7d3b577">More...</a><br /></td></tr>
 <tr class="separator:a5bb91cc7b2957807a03d8abba7d3b577"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12e08e75183794cd3ccb57608b34e603"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a12e08e75183794cd3ccb57608b34e603">put_vertical</a> (int **sea, int start_x, int start_y, int length)</td></tr>
-<tr class="memdesc:a12e08e75183794cd3ccb57608b34e603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put the ship vertically on the sea.  <a href="#a12e08e75183794cd3ccb57608b34e603">More...</a><br /></td></tr>
+<tr class="memdesc:a12e08e75183794cd3ccb57608b34e603"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puts a ship with a given lenght vertically on the sea at the given start point.  <a href="#a12e08e75183794cd3ccb57608b34e603">More...</a><br /></td></tr>
 <tr class="separator:a12e08e75183794cd3ccb57608b34e603"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac46786252302c2454404cbcf72e532dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#ac46786252302c2454404cbcf72e532dd">put_ship</a> (int **sea, int length)</td></tr>
-<tr class="memdesc:ac46786252302c2454404cbcf72e532dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate random coordinates and direction, and put ship on the sea.  <a href="#ac46786252302c2454404cbcf72e532dd">More...</a><br /></td></tr>
+<tr class="memdesc:ac46786252302c2454404cbcf72e532dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a random start point and direction, puts the given ship on the sea with the generated coordinates.  <a href="#ac46786252302c2454404cbcf72e532dd">More...</a><br /></td></tr>
 <tr class="separator:ac46786252302c2454404cbcf72e532dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0a0d6dc7564e1e35b2a663ebbc61e07"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#ad0a0d6dc7564e1e35b2a663ebbc61e07">fill_sea</a> (int **sea)</td></tr>
-<tr class="memdesc:ad0a0d6dc7564e1e35b2a663ebbc61e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Put all ships on the sea.  <a href="#ad0a0d6dc7564e1e35b2a663ebbc61e07">More...</a><br /></td></tr>
+<tr class="memdesc:ad0a0d6dc7564e1e35b2a663ebbc61e07"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puts all ships on the sea with random principe.  <a href="#ad0a0d6dc7564e1e35b2a663ebbc61e07">More...</a><br /></td></tr>
 <tr class="separator:ad0a0d6dc7564e1e35b2a663ebbc61e07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a546381bd29538bffdd598823b57aa58d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a546381bd29538bffdd598823b57aa58d">show_shot_result</a> (int shot_result)</td></tr>
-<tr class="memdesc:a546381bd29538bffdd598823b57aa58d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the shot result message.  <a href="#a546381bd29538bffdd598823b57aa58d">More...</a><br /></td></tr>
+<tr class="memdesc:a546381bd29538bffdd598823b57aa58d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the shot result message.  <a href="#a546381bd29538bffdd598823b57aa58d">More...</a><br /></td></tr>
 <tr class="separator:a546381bd29538bffdd598823b57aa58d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05d731dfafe48f4fd6b8166a24140b68"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a05d731dfafe48f4fd6b8166a24140b68">kill_ship</a> (int **sea, int x, int y)</td></tr>
-<tr class="memdesc:a05d731dfafe48f4fd6b8166a24140b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shot at the given coordinates.  <a href="#a05d731dfafe48f4fd6b8166a24140b68">More...</a><br /></td></tr>
+<tr class="memdesc:a05d731dfafe48f4fd6b8166a24140b68"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shots at the point with the given coordinates.  <a href="#a05d731dfafe48f4fd6b8166a24140b68">More...</a><br /></td></tr>
 <tr class="separator:a05d731dfafe48f4fd6b8166a24140b68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2d6cfd80de78dcba45a22596c2427d9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#ad2d6cfd80de78dcba45a22596c2427d9">insert_shot_coordinates</a> (int &amp;x, int &amp;y)</td></tr>
-<tr class="memdesc:ad2d6cfd80de78dcba45a22596c2427d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows the user to enter axis and ordinate coordinates for which the shot will be executed.  <a href="#ad2d6cfd80de78dcba45a22596c2427d9">More...</a><br /></td></tr>
+<tr class="memdesc:ad2d6cfd80de78dcba45a22596c2427d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reads the x and y coordinates of the target point from the terminal.  <a href="#ad2d6cfd80de78dcba45a22596c2427d9">More...</a><br /></td></tr>
 <tr class="separator:ad2d6cfd80de78dcba45a22596c2427d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8b57908da1b1da3806cc663f1ecbbea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#ab8b57908da1b1da3806cc663f1ecbbea">play</a> (int **sea, int number_of_units)</td></tr>
-<tr class="memdesc:ab8b57908da1b1da3806cc663f1ecbbea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function provides the cycle where a shot at the sea wil be performed along the entered coordinnates and the corresponding result.  <a href="#ab8b57908da1b1da3806cc663f1ecbbea">More...</a><br /></td></tr>
+<tr class="memdesc:ab8b57908da1b1da3806cc663f1ecbbea"><td class="mdescLeft">&#160;</td><td class="mdescRight">The function provides the cycle where a shot at the sea will be performed along the entered coordinnates and the output of the corresponding result.  <a href="#ab8b57908da1b1da3806cc663f1ecbbea">More...</a><br /></td></tr>
 <tr class="separator:ab8b57908da1b1da3806cc663f1ecbbea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a7a55da58cb44f3dda559b01e06ab029f"><td class="memItemLeft" align="right" valign="top">const unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#a7a55da58cb44f3dda559b01e06ab029f">N</a> = 10</td></tr>
 <tr class="separator:a7a55da58cb44f3dda559b01e06ab029f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca972f97010e6b4d067bdfccae8114cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#aca972f97010e6b4d067bdfccae8114cc">ships</a> [4] = {1, 1, 1, 1}</td></tr>
+<tr class="memitem:aca972f97010e6b4d067bdfccae8114cc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="implementation_8cpp.html#aca972f97010e6b4d067bdfccae8114cc">ships</a> [4] = {2, 1, 1, 1}</td></tr>
 <tr class="separator:aca972f97010e6b4d067bdfccae8114cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
@@ -164,6 +168,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The number of ships for the game </p>
 
 </div>
 </div>
@@ -178,6 +183,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The label for the lost shot </p>
 
 </div>
 </div>
@@ -192,6 +198,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The label for the damaged unit </p>
 
 </div>
 </div>
@@ -212,7 +219,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Creates a two dimensional dynamic array, initializes every element with 0-s and returnes a int** pointer to the array, if there is no enough space throws bad_alloc() exception. </p>
-<p>this is a long description for something </p><dl class="section return"><dt>Returns</dt><dd>returns a pointer to the created array </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>returns a pointer to the created array </dd></dl>
 
 </div>
 </div>
@@ -258,14 +265,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Put all ships on the sea. </p>
+<p>Puts all ships on the sea with random principe. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Sea</td><td>where we have to put ships </td></tr>
-    <tr><td class="paramname">return</td><td>number of units </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>return number of units </dd></dl>
 
 </div>
 </div>
@@ -333,25 +340,25 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Allows the user to enter axis and ordinate coordinates for which the shot will be executed. </p>
+<p>Reads the x and y coordinates of the target point from the terminal. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">axis</td><td></td></tr>
-    <tr><td class="paramname">ordinate</td><td></td></tr>
+    <tr><td class="paramname">x</td><td>axis </td></tr>
+    <tr><td class="paramname">y</td><td>ordinate </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a4379b857bb0ef33bd6f0d8ba29e30423"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4379b857bb0ef33bd6f0d8ba29e30423">&#9670;&nbsp;</a></span>is_invalid_position()</h2>
+<a id="a7d098a65e36a83f5a042301e5408e00d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d098a65e36a83f5a042301e5408e00d">&#9670;&nbsp;</a></span>is_invalid_horizontal_position()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool is_invalid_position </td>
+          <td class="memname">bool is_invalid_horizontal_position </td>
           <td>(</td>
           <td class="paramtype">int **&#160;</td>
           <td class="paramname"><em>sea</em>, </td>
@@ -381,6 +388,70 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Cheks if the given start point is valid for horizontal putting a ship with the given lenght. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sea</td><td>is two dimensional array </td></tr>
+    <tr><td class="paramname">x</td><td>is the start axis of the ship </td></tr>
+    <tr><td class="paramname">y</td><td>is the start ordinate of the ship </td></tr>
+    <tr><td class="paramname">lenght</td><td>is the length of the ship </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns true if the position is not valid, 0 otherwise </dd></dl>
+
+</div>
+</div>
+<a id="a1f28bfe64eedcfa020533d92871ce6c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f28bfe64eedcfa020533d92871ce6c4">&#9670;&nbsp;</a></span>is_invalid_vertical_position()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool is_invalid_vertical_position </td>
+          <td>(</td>
+          <td class="paramtype">int **&#160;</td>
+          <td class="paramname"><em>sea</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cheks if the given start point is valid for vertical putting a ship with the given lenght. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sea</td><td>is two dimensional array </td></tr>
+    <tr><td class="paramname">x</td><td>is the start axis of the ship </td></tr>
+    <tr><td class="paramname">y</td><td>is the start ordinate of the ship </td></tr>
+    <tr><td class="paramname">lenght</td><td>is the length of the ship </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>returns true if the position is not valid, 0 otherwise </dd></dl>
 
 </div>
 </div>
@@ -428,13 +499,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Check, whether the point on the entered coordinates on a single distance with another ship or not. </p>
-<dl class="section return"><dt>Returns</dt><dd>false if on a single distance, true otherwise </dd></dl>
+<p>Checks if the given point is on the ship, or the distance between them is 1. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x</td><td>is the start axis of the ship </td></tr>
+    <tr><td class="paramname">y</td><td>is the start ordinate of the ship </td></tr>
+    <tr><td class="paramname">offset</td><td>is the length of the ship </td></tr>
+    <tr><td class="paramname">i</td><td>is the axis of the given point </td></tr>
+    <tr><td class="paramname">j</td><td>is the ordinate of the given point </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>false if on a single distance or on the ship, true otherwise </dd></dl>
 
 </div>
 </div>
-<a id="a96f31e9ae2789f95321b63b72a6381a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96f31e9ae2789f95321b63b72a6381a8">&#9670;&nbsp;</a></span>is_out_of_sea()</h2>
+<a id="a8ab45306df873ee5a780b28c35be67d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ab45306df873ee5a780b28c35be67d1">&#9670;&nbsp;</a></span>is_out_of_sea()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -455,7 +536,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>offset</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>offset</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -465,12 +546,12 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Check whether the point on the entered coordinates (x, y) or the ship putted on the point goes beyond the bounds of the sea. </p>
+<p>Checks whether there is free space from start (x, y) with the given offset in the. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">axis</td><td></td></tr>
     <tr><td class="paramname">ordinate</td><td></td></tr>
-    <tr><td class="paramname">offset</td><td>- (0 if we check point, and the ship length when we check ship position) </td></tr>
+    <tr><td class="paramname">offset</td><td>- (1 if we check point, and the ship length when we check ship position) </td></tr>
   </table>
   </dd>
 </dl>
@@ -510,16 +591,16 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Shot at the given coordinates. </p>
+<p>Shots at the point with the given coordinates. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Sea</td><td>where we have to shot </td></tr>
-    <tr><td class="paramname">axis</td><td></td></tr>
-    <tr><td class="paramname">ordinate</td><td></td></tr>
+    <tr><td class="paramname">Playing</td><td>area </td></tr>
+    <tr><td class="paramname">axis</td><td>of the point </td></tr>
+    <tr><td class="paramname">ordinate</td><td>of the point </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>shot reslult value </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>shot result, returns 0, if the shot is on target, 1 if there is no ship unit at the given point, 2, if the given point is out of the sea, 3 if the given point was already shot </dd></dl>
 
 </div>
 </div>
@@ -549,11 +630,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The function provides the cycle where a shot at the sea wil be performed along the entered coordinnates and the corresponding result. </p>
+<p>The function provides the cycle where a shot at the sea will be performed along the entered coordinnates and the output of the corresponding result. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">The</td><td>Sea where we have to shot. </td></tr>
-    <tr><td class="paramname">The</td><td>count of cells where we located our ships. </td></tr>
+    <tr><td class="paramname">The</td><td>sea wich will be shot. </td></tr>
+    <tr><td class="paramname">The</td><td>count of the cells of the ships. </td></tr>
   </table>
   </dd>
 </dl>
@@ -598,16 +679,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Put the ship horizontally on the sea. </p>
+<p>Puts a ship with a given lenght horizontally on the sea at the given start point. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">the</td><td>sea, where we want to put the ship </td></tr>
+    <tr><td class="paramname">the</td><td>sea, where the ship will be put </td></tr>
     <tr><td class="paramname">start</td><td>X coordinate </td></tr>
     <tr><td class="paramname">start</td><td>Y coordinate </td></tr>
-    <tr><td class="paramname">length</td><td>of the ship, which we will put on (start_x, start_y) coordinate </td></tr>
+    <tr><td class="paramname">length</td><td>of the ship, which we will be put with the (start_x, start_y) start point </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if the given position is not valid, 2 if a part of the ship out of sea, 0 if the ship is put </dd></dl>
 
 </div>
 </div>
@@ -637,11 +719,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Generate random coordinates and direction, and put ship on the sea. </p>
+<p>Generates a random start point and direction, puts the given ship on the sea with the generated coordinates. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">Sea</td><td>where we have to put the ship </td></tr>
-    <tr><td class="paramname">length</td><td>of the ship </td></tr>
+    <tr><td class="paramname">The</td><td>sea where the ship will be put </td></tr>
+    <tr><td class="paramname">The</td><td>length of the ship </td></tr>
   </table>
   </dd>
 </dl>
@@ -686,16 +768,17 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Put the ship vertically on the sea. </p>
+<p>Puts a ship with a given lenght vertically on the sea at the given start point. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">the</td><td>sea, where we want to put the ship </td></tr>
+    <tr><td class="paramname">the</td><td>sea, where the ship will be put </td></tr>
     <tr><td class="paramname">start</td><td>X coordinate </td></tr>
     <tr><td class="paramname">start</td><td>Y coordinate </td></tr>
-    <tr><td class="paramname">length</td><td>of the ship, which we will put on (start_x, start_y) coordinate </td></tr>
+    <tr><td class="paramname">length</td><td>of the ship, which we will be put with the (start_x, start_y) start point </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>1 if the given position is not valid, 2 if a part of the ship out of sea, 0 if the ship is put </dd></dl>
 
 </div>
 </div>
@@ -761,7 +844,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Print the shot result message. </p>
+<p>Prints the shot result message. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">Shot</td><td>result value </td></tr>
@@ -783,6 +866,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>The size of the square sea </p>
 
 </div>
 </div>
@@ -793,10 +877,11 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ships[4] = {1, 1, 1, 1}</td>
+          <td class="memname">int ships[4] = {2, 1, 1, 1}</td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Array of ships. The value of ships i is the count of a ship with length i+1 </p>
 
 </div>
 </div>

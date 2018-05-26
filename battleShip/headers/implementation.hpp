@@ -12,7 +12,9 @@ bool is_out_of_sea(int, int, int);
 
 bool is_not_around_of_ship(int, int, int, int, int); 
 
-bool is_invalid_position(int**, int, int, int);
+bool is_invalid_horizontal_position(int**, int, int, int);
+
+bool is_invalid_vertical_position(int**, int, int, int);
 
 int kill_ship(int**, int, int);
 

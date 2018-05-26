@@ -1,14 +1,13 @@
 #include <implementation.hpp>
 #include <iostream>
 #include <new>
-
 /**
  *@brief The main function for battleship program
  * 
- *Creating the sea , then fill it with ships, after it user can play ...
+ * The fucntion creates a playing area, fills it with random layout of ships, and profides the user to play.
  *@return return 0 - success, return 1 - fail with message "cant allocate memory..." 
  *@authors Galust Betkhemyan, Sevak Sahakyan
- *@date 22.05.2018
+ *@date 25.05.2018
  */
 int main(){
     try {
