@@ -14,14 +14,13 @@ For compilation use the following command in the project root directory:
 
 make
 
-To clean secondary files which should be generated after compilation use the following command:
-
-make clean
-
 To generate doxygen documentations use the following command: 
 
 make docs
 
+To delete secondary files which should be generated after compilation and doxygen files use the following command:
+
+make clean
 
 SORCE CODE ORGANIZATION
 ------------------------------------------------
