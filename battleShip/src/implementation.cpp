@@ -29,7 +29,7 @@ const unsigned int N = 10;
 /**
  * Array of ships. The value of ships i is the count of a ship with length i+1
  */
-int ships[4] = {2, 1, 1, 1};
+int ships[4] = {1, 1, 1, 1};
 
 /**
  *@brief Reset input stream when the user has entered wrong type value

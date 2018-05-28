@@ -20,7 +20,7 @@ int kill_ship(int**, int, int);
 
 int fill_sea(int**);
 
-void put_ship(int**, int, int, int);
+void put_ship(int**, int);
 
 int generate_random_number(int, int);
 
