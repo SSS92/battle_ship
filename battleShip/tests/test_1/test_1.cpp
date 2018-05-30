@@ -4,7 +4,9 @@
 #include <cassert>
 
 #define number_of_ships 4
+
 const unsigned int size = 10;
+/*
 int ships_1[4] = {1, 1, 1, 1};
 int ships_2[4] = {1, 1, 1, 1};
 
@@ -44,6 +46,7 @@ int** generate_ships_layout (int** sea, int ships_array_index)
 	return sea;
 }
 
+*/
 int check_playing_areas_random_states (int** sea_1, int** sea_2)
 {
 	for (int i = 0; i < size; ++i) {
@@ -59,7 +62,7 @@ int check_playing_areas_random_states (int** sea_1, int** sea_2)
 
 void write_test_result (char test_index, int test_result)
 {
-	const char *path="../test_results.txt";
+	const char *path="./test_results.txt";
 	std::ofstream myfile;
 	myfile.open (path);
 	if (1 == test_result) {
@@ -70,14 +73,23 @@ void write_test_result (char test_index, int test_result)
 	myfile.close();
 }
 
-int main() 
+extern int ships[4];
+
+int main(int argc, char *argv[]) 
 {
-	int** sea_1 = create_sea();
-	sea_1 = generate_ships_layout(sea_1, 1);
-	int** sea_2 = create_sea();
-	sea_2 = generate_ships_layout(sea_2, 2);
-	int test_result = check_playing_areas_random_states(sea_1, sea_2);
-	write_test_result('1', test_result);	
+	int ships_copy[4];
+	for(int i = 0; i<4; ++i){
+	    ships_copy[i] = ships[i];
+	    std::cout << ships_copy[i] << std::endl;
+	}
+//	int** sea_1 = create_sea();
+//	sea_1 = fill_sea(sea_1);
+//	ships = ships_copy;
+//	int** sea_2 = create_sea();
+//	sea_2 = fill_sea(sea_2);
+//	int test_result = check_playing_areas_random_states(sea_1, sea_2);
+//	write_test_result('1', test_result);	
+	std::cout<< "hello";
 	return 0;
 }
 

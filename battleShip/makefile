@@ -3,30 +3,30 @@ OBJECTS := $(patsubst src/%.cpp, obj/%.o, $(SOURCES))
 DEPENDS := $(patsubst src/%.cpp, deps/%.dep, $(SOURCES))
 
 bin/program : $(OBJECTS)
-	@mkdir -p bin
-	@g++ $(OBJECTS) -o $@
+	mkdir -p bin
+	g++ $(OBJECTS) -o $@
 
 
-obj/%.o : src/%.cpp
-	@mkdir -p ./obj
-	@g++ -c $< -I./headers -o $@
+obj/%.o : src/%.cpp 
+	mkdir -p ./obj
+	g++ -c $< -I./src -o $@
 
 deps/%.dep : src/%.cpp
-	@mkdir -p ./deps
-	@g++ -MM $< -MT "$@ $(patsubst %.dep, %.o, $@)" -o $@
+	mkdir -p ./deps
+	g++ -MM $< -MT "$@ $(patsubst %.dep, %.o, $@)" -o $@ -I./src
 
 -include $(DEPENDS)
 
 .PHONY : clean docs test
 clean :
-	@echo "cleaning up"
-	@rm -rf  deps obj bin docs/doxygen test_results.txt
-	@cd tests && make clean
+	echo "cleaning up"
+	rm -rf  deps obj bin docs/doxygen test_results.txt
+	cd tests && make clean
 
 docs : 
-	@mkdir -p docs/doxygen
-	@doxygen docs/doxygen_config/config
-
+	mkdir -p docs/doxygen
+	doxygen docs/doxygen_config/config
+##TODO
 test : 
-	@touch test_results.txt
-	@cd tests && make
+	touch test_results.txt
+	cd tests && make
