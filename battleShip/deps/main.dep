@@ -1,1 +1,0 @@
-deps/main.dep deps/%.o: src/main.cpp src/implementation.hpp
