@@ -1,7 +1,7 @@
 SOURCES := $(wildcard ./*.cpp)
 OBJECTS := $(patsubst ./%.cpp, ./%.o, $(SOURCES))
 DEPENDS := $(patsubst ./%.cpp, ./%.dep, $(SOURCES))
-DEPENDS += " implementation.o"
+DEPENDS += implementation.dep
 IMPLEMENTATION := ../../src/implementation.cpp
 HEADERS := -I../../src -I./
 
